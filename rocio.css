@@ -1,0 +1,345 @@
+
+
+:root {
+  --primary: #2575fc;
+  --secondary: #6a11cb;
+}
+*  {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background: linear-gradient(120deg, #fdfbfb, #ebedee);
+    color: #2c3e50;
+}
+
+/* HEADER */
+.header {
+    height: 80vh;
+     background: linear-gradient(135deg, var(--secondary), var(--primary));
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.header-content {
+    color: white;
+    animation: fadeDown 1.2s ease;
+}
+
+.photo-container {
+    width: 380px;
+    height: 380px;
+    margin: auto;
+    border-radius: 50%;
+    padding: 6px;
+    background: linear-gradient(45deg, #ffdd00, #ff6a00);
+    animation: float 4s ease-in-out infinite;
+}
+
+.photo-container img {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+/* TITULOS */
+.header h1 {
+    font-size: 3rem;
+    margin-top: 20px;
+}
+
+.header h2 {
+    font-weight: 300;
+    margin-bottom: 25px;
+}
+
+/* BOTONES */
+.buttons {
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+}
+
+.btn {
+    padding: 12px 26px;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.primary {
+    background: #ffdd00;
+    color: #333;
+}
+
+.secondary {
+    background: #ffffff;
+    color: #2575fc;
+}
+
+.outline {
+    border: 2px solid white;
+    color: white;
+}
+
+.btn:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.25);
+      background: var(--primary);
+}
+
+/* MAIN */
+.main {
+    max-width: 1100px;
+    margin: -120px auto 40px;
+    padding: 20px;
+}
+
+/* CARDS */
+.card {
+    background: white;
+    border-radius: 20px;
+    padding: 35px;
+    margin-bottom: 30px;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+}
+
+/* TIMELINE */
+.timeline {
+    display: grid;
+    gap: 20px;
+}
+
+.event span {
+    font-size: 0.85rem;
+    color: #2575fc;
+}
+
+/* SKILLS */
+.skills {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+.skills span {
+    background: linear-gradient(45deg, var(--secondary), var(--primary));
+    color: white;
+    padding: 10px 18px;
+    border-radius: 25px;
+    transition: 0.3s;
+}
+
+.skills span:hover {
+    transform: scale(1.1);
+}
+
+/* CURSOS */
+.courses li {
+    margin-bottom: 10px;
+}
+
+/* CONTACTO */
+.contact {
+    text-align: center;
+}
+
+/* FOOTER */
+footer {
+   background: var(--primary);
+    color: white;
+    text-align: center;
+    padding: 25px;
+}
+
+/* ANIMACIONES */
+@keyframes fadeDown {
+    from { opacity: 0; transform: translateY(-30px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes float {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+}
+.info-list li {
+    margin-bottom: 8px;
+}
+
+.timeline ul {
+    margin-top: 10px;
+    padding-left: 18px;
+}
+
+.timeline ul li {
+    margin-bottom: 6px;
+}
+
+.slide-right {
+    animation: slideRight 1s ease;
+}
+
+@keyframes slideRight {
+    from {
+        opacity: 0;
+        transform: translateX(40px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+/* BOTÓN MODO OSCURO */
+.dark-btn {
+    margin-top: 15px;
+    cursor: pointer;
+}
+
+/* ===== MODO OSCURO ===== */
+body.dark {
+    background: linear-gradient(120deg, #121212, #1e1e1e);
+    color: #f1f1f1;
+}
+
+body.dark .header {
+    background: linear-gradient(135deg, #000428, #004e92);
+}
+
+body.dark .card {
+    background: #1f1f1f;
+    color: #e0e0e0;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.6);
+}
+
+body.dark h1,
+body.dark h2,
+body.dark h3,
+body.dark h4 {
+    color: #ffffff;
+}
+
+body.dark .skills span {
+    background: linear-gradient(45deg, #ff512f, #dd2476);
+}
+
+body.dark footer {
+    background: #000;
+}
+/* ===== ANIMACIONES SCROLL ===== */
+.reveal {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: all 0.8s ease;
+}
+
+.reveal.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+.color-selector {
+    margin-top: 15px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    justify-content: center;
+}
+
+.color-selector span {
+    font-size: 0.9rem;
+    color: white;
+}
+
+.color-btn {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    border: 2px solid white;
+    cursor: pointer;
+    transition: transform 0.3s;
+}
+
+.color-btn:hover {
+    transform: scale(1.3);
+}
+
+.color-btn:nth-child(2) {
+    background: linear-gradient(45deg, #6a11cb, #2575fc);
+}
+
+.color-btn:nth-child(3) {
+    background: linear-gradient(45deg, #38ef7d, #0f9b8e);
+}
+
+.color-btn:nth-child(4) {
+    background: linear-gradient(45deg, #dd2476, #ff512f);
+}
+
+.color-btn:nth-child(5) {
+    background: linear-gradient(45deg, #2ebf91, #8360c3);
+}
+/* ============================= */
+/* ANIMACIONES BASE POR TEMA */
+/* ============================= */
+
+body[data-theme="blue"] .reveal.active {
+    animation: fadeSoft 0.9s ease forwards;
+}
+
+body[data-theme="green"] .reveal.active {
+    animation: slideFluid 1s ease forwards;
+}
+
+body[data-theme="red"] .reveal.active {
+    animation: popStrong 0.7s ease forwards;
+}
+
+body[data-theme="purple"] .reveal.active {
+    animation: zoomModern 0.9s ease forwards;
+}
+
+/* KEYFRAMES */
+@keyframes fadeSoft {
+    from { opacity: 0; transform: translateY(30px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes slideFluid {
+    from { opacity: 0; transform: translateX(-40px); }
+    to { opacity: 1; transform: translateX(0); }
+}
+
+@keyframes popStrong {
+    0% { opacity: 0; transform: scale(0.85); }
+    80% { opacity: 1; transform: scale(1.05); }
+    100% { transform: scale(1); }
+}
+
+@keyframes zoomModern {
+    from { opacity: 0; transform: scale(0.9) rotate(-1deg); }
+    to { opacity: 1; transform: scale(1) rotate(0); }
+}
+body[data-theme="red"] .photo-container {
+    animation: pulseRed 2s infinite;
+}
+
+body[data-theme="green"] .photo-container {
+    animation: floatGreen 3s ease-in-out infinite;
+}
+
+@keyframes pulseRed {
+    0%,100% { transform: scale(1); }
+    50% { transform: scale(1.08); }
+}
+
+@keyframes floatGreen {
+    0%,100% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+}
